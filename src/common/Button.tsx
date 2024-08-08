@@ -8,7 +8,10 @@ interface ButtonProps {
 }
 
 const Button = ({onPress, title, style, textStyle}: ButtonProps) => (
-  <TouchableOpacity onPress={onPress} style={[styles.button, style]}>
+  <TouchableOpacity
+    accessibilityRole="button"
+    onPress={onPress}
+    style={[styles.button, style]}>
     <Text style={[styles.buttonText, textStyle]}>{title}</Text>
   </TouchableOpacity>
 );

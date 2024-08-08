@@ -29,7 +29,7 @@ To run this project locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/ismailharmanda/salesart.git
+   git clone git@github.com:ismailharmanda/salesart.git
    cd salesart
    ```
 
@@ -79,6 +79,7 @@ yarn test
 
 ## Folder Structure
 
+```bash
 salesart/
 ├── **tests**/
 │ ├── common/
@@ -105,6 +106,7 @@ salesart/
 ├── jest.config.js
 ├── .eslintrc.js
 └── README.md
+```
 
 ## Contributing
 

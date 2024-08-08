@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     flexWrap: 'wrap',
     width: '40%',
+    color: '#333',
   },
   todoActions: {
     flexDirection: 'row',

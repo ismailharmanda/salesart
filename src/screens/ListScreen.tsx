@@ -85,6 +85,7 @@ const ListScreen: React.FC = () => {
       <Text style={styles.header}>My Todo List</Text>
       <View style={styles.inputContainer}>
         <TextInput
+          placeholderTextColor={'#999'}
           autoCapitalize="none"
           autoCorrect={false}
           style={styles.input}
@@ -119,6 +120,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
+    color: '#333',
   },
   inputContainer: {
     flexDirection: 'row',
@@ -133,6 +135,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     marginRight: 10,
     backgroundColor: '#fff',
+    color: '#333',
   },
   addButton: {
     backgroundColor: '#007bff',

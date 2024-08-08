@@ -1,4 +1,5 @@
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
+import {Button} from '../common';
 
 interface TodoItemProps {
   id: string;
@@ -22,15 +23,16 @@ const TodoItem: React.FC<TodoItemProps> = ({
       {text}
     </Text>
     <View style={styles.todoActions}>
-      <TouchableOpacity onPress={() => onToggle(id)}>
-        <Text style={styles.todoAction}>{completed ? 'Undo' : 'Complete'}</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => onEdit(id, text)}>
-        <Text style={styles.todoAction}>Edit</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => onDelete(id)}>
-        <Text style={[styles.todoAction, styles.deleteAction]}>Delete</Text>
-      </TouchableOpacity>
+      <Button
+        onPress={() => onToggle(id)}
+        title={completed ? 'Undo' : 'Complete'}
+      />
+      <Button onPress={() => onEdit(id, text)} title="Edit" />
+      <Button
+        onPress={() => onDelete(id)}
+        title="Delete"
+        textStyle={styles.deleteButtonText}
+      />
     </View>
   </View>
 );
@@ -53,12 +55,13 @@ const styles = StyleSheet.create({
   },
   todoActions: {
     flexDirection: 'row',
+    gap: 8,
   },
   todoAction: {
     marginLeft: 10,
     color: '#007bff',
   },
-  deleteAction: {
+  deleteButtonText: {
     color: '#ff0000',
   },
   completed: {

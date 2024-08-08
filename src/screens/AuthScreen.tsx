@@ -22,7 +22,7 @@ const AuthScreen = ({handleAuth, onFailedAuth}: AuthScreenProps) => {
           "You haven't set up any security on your device. Please set up a screen lock.",
           [
             {
-              text: 'Navigate to settings to set up a screen lock',
+              text: 'NAVIGATE TO SETTINGS TO SET UP A SCREEN LOCK',
               onPress: () =>
                 isAndroid
                   ? Linking.sendIntent('android.settings.SECURITY_SETTINGS')
@@ -42,7 +42,7 @@ const AuthScreen = ({handleAuth, onFailedAuth}: AuthScreenProps) => {
   };
   return (
     <View style={styles.container}>
-      <Button title="Login" onPress={handleLoginPress} />
+      <Button title="Navigate to my Todo List →" onPress={handleLoginPress} />
     </View>
   );
 };
